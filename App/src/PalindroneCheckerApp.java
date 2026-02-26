@@ -1,13 +1,13 @@
 /**
- * ---------------------------------------------------------
- * MAIN CLASS – PalindroneCheckerApp
- * ---------------------------------------------------------
+ * ================================================================
+ * MAIN CLASS - UseCase1PalindromeCheckerApp
+ * ================================================================
  *
  * Use Case 1: Application Entry & Welcome Message
  *
  * Description:
  * This class represents the entry point of the
- * Palindrome Checker Application.
+ * Palindrome Checker Management System.
  *
  * At this stage, the application:
  * - Starts execution from the main() method
@@ -15,6 +15,8 @@
  * - Shows application version
  *
  * No palindrome logic is implemented yet.
+ *
+ * The goal is to establish a clear startup flow.
  *
  * @author Asrita
  * @version 1.0
@@ -24,12 +26,46 @@ public class PalindroneCheckerApp {
 
     /**
      * Application entry point.
-     * This is the first method executed by the JVM.
+     *
+     * This is the first method executed by the JVM
+     * when the program starts.
+     *
+     * @param args Command-line arguments
      */
     public static void main(String[] args) {
 
-        System.out.println("Welcome to the Palindrome Checker Application");
-        System.out.println("Version : 1.0");
-        System.out.println("System initialized successfully.");
+        // version 2.0
+// author Abc
+// useCase 2: Palindrome Checker App
+
+import java.util.Scanner;
+
+        public class PalindromeCheckerApp {
+
+            public static void main(String[] args) {
+
+                System.out.println("Welcome to Palindrome Checker App Management System");
+
+                Scanner scanner = new Scanner(System.in);
+
+                System.out.print("Enter a word or sentence: ");
+                String input = scanner.nextLine();
+
+                // Remove spaces and convert to lowercase
+                String cleanedInput = input.replaceAll("\\s+", "").toLowerCase();
+
+                // Reverse the string
+                String reversed = new StringBuilder(cleanedInput).reverse().toString();
+
+                // Check if palindrome
+                if (cleanedInput.equals(reversed)) {
+                    System.out.println("Result: It is a Palindrome!");
+                } else {
+                    System.out.println("Result: It is NOT a Palindrome.");
+                }
+
+                scanner.close();
+            }
+        }
     }
 }
