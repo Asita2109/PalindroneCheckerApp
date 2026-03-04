@@ -1,7 +1,11 @@
 import java.util.Scanner;
+
 public class PalindroneCheckerApp {
+
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
+
         System.out.println("Enter String: ");
         String input = scanner.nextLine();
 
@@ -10,6 +14,7 @@ public class PalindroneCheckerApp {
 
         int start = 0;
         int end = arr.length - 1;
+
         while (start < end) {
             if (arr[start] != arr[end]) {
                 isPalindrome = false;
@@ -26,6 +31,5 @@ public class PalindroneCheckerApp {
         }
 
         scanner.close();
-
     }
 }
