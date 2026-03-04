@@ -6,7 +6,7 @@ public class PalindroneCheckerApp {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter String: ");
+        System.out.print("Enter String: ");
         String input = scanner.nextLine();
 
         char[] arr = input.toCharArray();
